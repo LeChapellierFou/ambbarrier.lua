@@ -1,0 +1,12 @@
+------------------------------------------------------------
+--  Convert to lua for HappinessMP By LeChapellierFou     --
+--                  03/08/2025                            --
+--          Automatic barrier police station              --
+--            Original script from Rockstar               --
+--              Please Respect Credits                    --
+------------------------------------------------------------
+
+-- Important !
+-- If the objects are broken, the script does not repair them.
+-- Only episode 0 police car detected 
+-- hash main object : 21350196 
