@@ -18,6 +18,29 @@ local ObjectBarrier1 = nil
 local ObjectBarrier2 = nil
 local ObjectMain = nil
 
+local LoadModels = function(model)
+    
+    local hash
+    if isNumber(model) then 
+        hash = model
+    else
+        hash = Game.GetHashKey(model)
+    end
+    
+    if(Game.IsModelInCdimage(hash)) then 
+        Game.RequestModel(hash)
+        Game.LoadAllObjectsNow()
+        while not Game.HasModelLoaded(hash) do
+            Game.RequestModel(hash)
+            Thread.Pause(0)
+        end
+
+        return true
+    else
+        return false
+    end
+end
+
 local function SwitchMod(iParam0)
 
     if (SwitchLoop ~= iParam0) then 
