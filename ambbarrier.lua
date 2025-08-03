@@ -65,9 +65,9 @@ local sub_1662 = function()
             local Veh = Game.GetCarCharIsUsing( GetPlayerPed());
             if ((not (Game.IsCarOnFire( Veh ))) and (Game.IsVehDriveable( Veh ))) then 
                 
-                local iVar3 = Game.GetDriverOfCar( Veh);
+                local Driver = Game.GetDriverOfCar( Veh);
                 if (not (Game.IsCarModel( Veh, 1491375716 ))) then 
-                    if (iVar3 == GetPlayerPed()) then 
+                    if (Driver == GetPlayerPed()) then 
                         return true
                     end
                 end
@@ -323,4 +323,5 @@ Events.Subscribe("scriptInit", function()
             Manager() 
         end
     end)
+
 end)
